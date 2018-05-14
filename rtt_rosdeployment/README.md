@@ -7,14 +7,16 @@ component over ROS. This uses ROS srv types in the
 
 ## Supported Operations (C++ : ROS Service Name)
 
-* `DeploymentCompnent::runScript`:`run_script`
-* `DeploymentCompnent::getPeerList`:`get_peer_list`
+* `DeploymentComponent::runScript`:`run_script`
+* `DeploymentComponent::getPeerList`:`get_peer_list`
+* `DeploymentComponent::eval`:`eval`
 
 ## Usage
 
 You can advertise the services from a deployment component like the following:
 
-```cpp
-import("rtt_rosdeployment");
-this.loadservice("rosdeployment");
+```ruby
+import("rtt_rosdeployment")
+loadService("Deployer","rosdeployment") # or loadService("this","rosdeployment")
 ```
+;;
