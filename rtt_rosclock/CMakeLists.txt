@@ -25,7 +25,7 @@ if(OROCOS_TARGET STREQUAL "xenomai")
       message(FATAL_ERROR "Xenomai Posix skin is required for rtt_rosclock")
   endif()
   include_directories(${Xenomai_POSIX_INCLUDE_DIRS})
-  set_target_properties(rtt_rosclock PROPERTIES 
+  set_target_properties(rtt_rosclock PROPERTIES
     LINK_FLAGS ${XENOMAI_POSIX_LDFLAGS}
     COMPILE_FLAGS ${XENOMAI_POSIX_CFLAGS}
     COMPILE_DEFINITIONS __XENO__
