@@ -32,6 +32,7 @@
 #define RTT_DYNAMIC_RECONFIGURE_SERVER_H
 
 #include <rtt/Service.hpp>
+#include <rtt/plugin/ServicePlugin.hpp>
 #include <rtt/TaskContext.hpp>
 #include <rtt/os/Mutex.hpp>
 #include <rtt/Logger.hpp>
