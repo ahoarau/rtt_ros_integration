@@ -1,16 +1,11 @@
 #!/usr/bin/env python
-
 from __future__ import print_function
 from __future__ import unicode_literals
 
 import sys
-
-import roslib
-
 import gencpp
 import genmsg
 
-from  roslib import packages,msgs
 import os
 
 from io import StringIO
@@ -96,11 +91,11 @@ def generate_boost_serialization(package, msg_path, msg_type, boost_header_path)
     (output_dir,filename) = os.path.split(boost_header_path)
     try:
         os.makedirs(output_dir)
-    except OSError as e:
+    except OSError:
         pass
 
-    f = open(boost_header_path, 'w')
-    print(s.getvalue(), file=f)
+    with open(boost_header_path, mode='w') as f:
+        print(s.getvalue(), file=f)
 
     s.close()
 
